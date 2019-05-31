@@ -1,0 +1,9 @@
+graph TD
+%% TODO: how to trigger flow?
+queue -->|Message with criteria| rel2doc(Read Source) 
+rel2doc -->|Document| mongo(Mongo)
+%% TODO: how to trigger reconciliation?
+mongo --> Reconciliation
+rel2doc -->|Select records with relations| sql(Source SQL)
+rel2doc -->|Document| mapper(Mapper)
+

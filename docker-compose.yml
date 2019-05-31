@@ -1,0 +1,14 @@
+version: "3"
+services:
+  nifi:
+    image: apache/nifi
+    ports:
+      - 8080:8080
+
+  mongo_source:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data:/data/db
+
