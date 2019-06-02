@@ -4,8 +4,9 @@ services:
     image: apache/nifi
     ports:
       - 8080:8080
+      - 10001:10001
 
-  mongo_source:
+  mongo:
     image: mongo
     ports:
       - 27017:27017
