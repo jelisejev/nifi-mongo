@@ -5,11 +5,13 @@ services:
     ports:
       - 8080:8080
       - 10001:10001
+    volumes:
+      - ./nifi/conf:/opt/nifi/nifi-current/conf
 
   mongo:
     image: mongo
     ports:
       - 27017:27017
     volumes:
-      - ./data:/data/db
+      - ./mongo/data:/data/db
 
